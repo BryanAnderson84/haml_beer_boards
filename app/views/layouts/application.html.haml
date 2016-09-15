@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Beer Boards
+    = csrf_meta_tags
+
+    = stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "http://localhost:3000/"} Boards
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+
+    = yield
